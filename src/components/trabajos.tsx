@@ -1,0 +1,70 @@
+import { MapPin, PlayCircle } from "lucide-react";
+import { trabajos } from "../utils/trabajos";
+
+export default function Trabajos() {
+  return (
+    <section id="trabajos" className="py-16">
+      <div className="container mx-auto px-4">
+        <h3 className="text-4xl font-bold text-center text-gray-800 mb-4">
+          Trabajos Realizados
+        </h3>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          Conoce algunos de nuestros proyectos más destacados realizados en
+          diferentes ciudades de Bolivia
+        </p>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {trabajos.map((trabajo) => (
+            <div
+              key={trabajo.id}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group"
+            >
+              <div className="relative">
+                <img
+                  src={trabajo.imagen}
+                  alt={trabajo.titulo}
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                {trabajo.tipo === "video" && (
+                  <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <PlayCircle className="h-16 w-16 text-white" />
+                  </div>
+                )}
+                <div className="absolute top-4 right-4">
+                  <span
+                    className={`px-3 py-1 rounded-full text-sm font-medium ${
+                      trabajo.tipo === "Residencial"
+                        ? "bg-blue-500 text-white"
+                        : trabajo.tipo === "Comercial"
+                        ? "bg-purple-500 text-white"
+                        : trabajo.tipo === "Mantenimiento"
+                        ? "bg-orange-500 text-white"
+                        : "bg-red-500 text-white"
+                    }`}
+                  >
+                    {trabajo.tipo === "video" ? "Video" : trabajo.tipo}
+                  </span>
+                </div>
+              </div>
+
+              <div className="p-6">
+                <h4 className="text-xl font-semibold text-gray-800 mb-2">
+                  {trabajo.titulo}
+                </h4>
+                <p className="text-gray-600 mb-4">{trabajo.descripcion}</p>
+
+                <div className="flex items-center justify-between text-sm text-gray-500">
+                  <div className="flex items-center space-x-1">
+                    <MapPin className="h-4 w-4" />
+                    <span>{trabajo.ubicacion}</span>
+                  </div>
+                  <span>{trabajo.fecha}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
