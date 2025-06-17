@@ -23,6 +23,6 @@ export const servicios = [
   {
     icono: CheckCircle,
     titulo: "Garantía Completa",
-    descripcion: "Todos nuestros trabajos incluyen garantía extendida por 2 años"
+    descripcion: "Todos nuestros trabajos incluyen garantía"
   }
 ];
