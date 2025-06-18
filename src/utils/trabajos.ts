@@ -9,19 +9,23 @@ export const trabajos = [
     media: [
       {
         url: "/soldadura1.jpeg",
-        type: "image"
+        type: "image",
+        thumbnail: ""
       },
       {
         url: "/soldadura2.jpeg",
-        type: "image"
+        type: "image",
+        thumbnail: ""
       },
       {
         url: "/soldadura3.jpeg",
-        type: "image"
+        type: "image",
+        thumbnail: ""
       },
       {
         url: "/soldadura4.jpeg",
-        type: "image"
+        type: "image",
+        thumbnail: ""
       }
     ]
   },
@@ -35,7 +39,8 @@ export const trabajos = [
     media: [
       {
         url: "https://images.pexels.com/photos/5691622/pexels-photo-5691622.jpeg?auto=compress&cs=tinysrgb&w=500",
-        type: "image"
+        type: "image",
+        thumbnail: ""
       },
     ]
   },
@@ -49,7 +54,8 @@ export const trabajos = [
     media: [
       {
         url: "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=500",
-        type: "image"
+        type: "image",
+        thumbnail: ""
       },
     ]
   },
@@ -63,7 +69,8 @@ export const trabajos = [
     media: [
       {
         url: "https://images.pexels.com/photos/5691623/pexels-photo-5691623.jpeg?auto=compress&cs=tinysrgb&w=500",
-        type: "video"
+        type: "video",
+        thumbnail: "https://images.pexels.com/photos/5691623/pexels-photo-5691623.jpeg?auto=compress&cs=tinysrgb&w=500",
       },
     ]
   },
@@ -77,7 +84,8 @@ export const trabajos = [
     media: [
       {
         url: "https://images.pexels.com/photos/2724748/pexels-photo-2724748.jpeg?auto=compress&cs=tinysrgb&w=500",
-        type: "image"
+        type: "image",
+        thumbnail: ""
       },
     ]
   },
@@ -90,9 +98,25 @@ export const trabajos = [
     fecha: "Noviembre 2023",
     media: [
       {
-        url: "https://images.pexels.com/photos/5691625/pexels-photo-5691625.jpeg?auto=compress&cs=tinysrgb&w=500",
-        type: "video"
+        url: "/soldadura.mp4",
+        type: "video",
+        thumbnail: "/soldadura1.jpeg",
       },
+      {
+        url: "/soldadura2.jpeg",
+        type: "image",
+        thumbnail: ""
+      },
+      {
+        url: "/soldadura3.jpeg",
+        type: "image",
+        thumbnail: ""
+      },
+      {
+        url: "/soldadura4.jpeg",
+        type: "image",
+        thumbnail: ""
+      }
     ]
   }
 ];

@@ -4,10 +4,12 @@ import { MapPin, PlayCircle } from "lucide-react";
 import { trabajos } from "../utils/trabajos";
 
 export default function Trabajos() {
-  const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
+  const [selectedMedia, setSelectedMedia] = useState<any>(null);
   const [selectedTrabajo, setSelectedTrabajo] = useState<any>(null);
 
-  const closeMedia = () => setSelectedMedia(null);
+  const closeMedia = () => {
+    setSelectedMedia(null);
+  };
   const closeGaleria = () => setSelectedTrabajo(null);
 
   return (
@@ -32,16 +34,21 @@ export default function Trabajos() {
               >
                 <div className="relative">
                   <img
-                    src={preview.url}
+                    src={
+                      preview.type === "video" ? preview.thumbnail : preview.url
+                    }
                     alt={trabajo.titulo}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-                    onClick={() => setSelectedMedia(preview.url)}
+                    onClick={() => setSelectedMedia(preview)}
                   />
 
                   {preview.type === "video" && (
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                    <button
+                      className="absolute inset-0 bg-black/40 flex items-center justify-center"
+                      onClick={() => setSelectedMedia(preview)}
+                    >
                       <PlayCircle className="h-16 w-16 text-white" />
-                    </div>
+                    </button>
                   )}
 
                   {hasMore && (
@@ -91,9 +98,26 @@ export default function Trabajos() {
       </div>
 
       {/* Modal para una sola imagen */}
-      <Dialog open={!!selectedMedia} onClose={closeMedia} className="fixed inset-0 z-50">
+      <Dialog
+        open={!!selectedMedia}
+        onClose={closeMedia}
+        className="fixed inset-0 z-50"
+      >
         <div className="flex items-center justify-center min-h-screen bg-black/80 p-4">
-          <img src={selectedMedia || ""} alt="Vista previa" className="max-h-[80vh] rounded-lg" />
+          {selectedMedia?.type === "video" ? (
+            <video
+              src={selectedMedia?.url || ""}
+              controls
+              className="max-h-[80vh] rounded-lg"
+              autoPlay
+            />
+          ) : (
+            <img
+              src={selectedMedia?.url || ""}
+              alt="Vista previa"
+              className="max-h-[80vh] rounded-lg"
+            />
+          )}
           <button
             onClick={closeMedia}
             className="absolute top-4 right-4 text-white text-2xl font-bold"
@@ -104,31 +128,38 @@ export default function Trabajos() {
       </Dialog>
 
       {/* Modal galería completa */}
-      <Dialog open={!!selectedTrabajo} onClose={closeGaleria} className="fixed inset-0 z-50">
+      <Dialog
+        open={!!selectedTrabajo}
+        onClose={closeGaleria}
+        className="fixed inset-0 z-50"
+      >
         <div className="flex items-center justify-center min-h-screen bg-black/80 p-4">
           <DialogPanel className="w-full max-w-5xl rounded-lg bg-white p-6 space-y-4 overflow-y-auto max-h-[90vh]">
-            <h4 className="text-xl font-semibold text-gray-800">{selectedTrabajo?.titulo}</h4>
+            <h4 className="text-xl font-semibold text-gray-800">
+              {selectedTrabajo?.titulo}
+            </h4>
             <p className="text-gray-600">{selectedTrabajo?.descripcion}</p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {selectedTrabajo?.media.map((item: any, idx: number) =>
-                item.type === "image" ? (
+              {selectedTrabajo?.media.map((item: any, idx: number) => (
+                <div className="relative">
                   <img
                     key={idx}
-                    src={item.url}
+                    src={item.type === "video" ? item.thumbnail : item.url}
                     alt={`media-${idx}`}
                     className="w-full rounded cursor-pointer"
-                    onClick={() => setSelectedMedia(item.url)}
+                    onClick={() => setSelectedMedia(item)}
                   />
-                ) : (
-                  <video
-                    key={idx}
-                    controls
-                    src={item.url}
-                    className="w-full rounded"
-                  />
-                )
-              )}
+                  {item.type === "video" && (
+                    <button
+                      className="absolute inset-0 bg-black/40 flex items-center justify-center"
+                      onClick={() => setSelectedMedia(item)}
+                    >
+                      <PlayCircle className="h-16 w-16 text-white" />
+                    </button>
+                  )}
+                </div>
+              ))}
             </div>
 
             <Button
