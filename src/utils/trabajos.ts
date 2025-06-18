@@ -8,11 +8,19 @@ export const trabajos = [
     fecha: "Marzo 2024",
     media: [
       {
-        url: "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=500",
+        url: "/soldadura1.jpeg",
         type: "image"
       },
       {
-        url: "https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=500",
+        url: "/soldadura2.jpeg",
+        type: "image"
+      },
+      {
+        url: "/soldadura3.jpeg",
+        type: "image"
+      },
+      {
+        url: "/soldadura4.jpeg",
         type: "image"
       }
     ]

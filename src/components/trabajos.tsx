@@ -1,9 +1,15 @@
+import { useState } from "react";
+import { Dialog, DialogPanel, Button } from "@headlessui/react";
 import { MapPin, PlayCircle } from "lucide-react";
 import { trabajos } from "../utils/trabajos";
-import { useState } from "react";
 
 export default function Trabajos() {
-  const [selected, setSelected] = useState(null);
+  const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
+  const [selectedTrabajo, setSelectedTrabajo] = useState<any>(null);
+
+  const closeMedia = () => setSelectedMedia(null);
+  const closeGaleria = () => setSelectedTrabajo(null);
+
   return (
     <section id="trabajos" className="py-16">
       <div className="container mx-auto px-4">
@@ -16,30 +22,37 @@ export default function Trabajos() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {trabajos.map((trabajo) => {
-            const hasMore = trabajo.media.length > 1;
             const preview = trabajo.media[0];
+            const hasMore = trabajo.media.length > 1;
+
             return (
               <div
                 key={trabajo.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group"
-                onClick={() => {}}
               >
                 <div className="relative">
                   <img
-                    src={trabajo.media[0].url}
+                    src={preview.url}
                     alt={trabajo.titulo}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                    onClick={() => setSelectedMedia(preview.url)}
                   />
-                  {hasMore && (
-                    <div className="absolute bottom-2 right-2 bg-black/70 text-white text-lg px-2 py-1 rounded-full">
-                      +{trabajo.media.length - 1}
-                    </div>
-                  )}
-                  {trabajo.tipo === "video" && (
+
+                  {preview.type === "video" && (
                     <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                       <PlayCircle className="h-16 w-16 text-white" />
                     </div>
                   )}
+
+                  {hasMore && (
+                    <button
+                      onClick={() => setSelectedTrabajo(trabajo)}
+                      className="absolute bottom-2 right-2 bg-black/70 text-white text-sm px-3 py-1 rounded-full hover:bg-black"
+                    >
+                      Ver más +{trabajo.media.length - 1}
+                    </button>
+                  )}
+
                   <div className="absolute top-4 right-4">
                     <span
                       className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -76,6 +89,57 @@ export default function Trabajos() {
           })}
         </div>
       </div>
+
+      {/* Modal para una sola imagen */}
+      <Dialog open={!!selectedMedia} onClose={closeMedia} className="fixed inset-0 z-50">
+        <div className="flex items-center justify-center min-h-screen bg-black/80 p-4">
+          <img src={selectedMedia || ""} alt="Vista previa" className="max-h-[80vh] rounded-lg" />
+          <button
+            onClick={closeMedia}
+            className="absolute top-4 right-4 text-white text-2xl font-bold"
+          >
+            ✕
+          </button>
+        </div>
+      </Dialog>
+
+      {/* Modal galería completa */}
+      <Dialog open={!!selectedTrabajo} onClose={closeGaleria} className="fixed inset-0 z-50">
+        <div className="flex items-center justify-center min-h-screen bg-black/80 p-4">
+          <DialogPanel className="w-full max-w-5xl rounded-lg bg-white p-6 space-y-4 overflow-y-auto max-h-[90vh]">
+            <h4 className="text-xl font-semibold text-gray-800">{selectedTrabajo?.titulo}</h4>
+            <p className="text-gray-600">{selectedTrabajo?.descripcion}</p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {selectedTrabajo?.media.map((item: any, idx: number) =>
+                item.type === "image" ? (
+                  <img
+                    key={idx}
+                    src={item.url}
+                    alt={`media-${idx}`}
+                    className="w-full rounded cursor-pointer"
+                    onClick={() => setSelectedMedia(item.url)}
+                  />
+                ) : (
+                  <video
+                    key={idx}
+                    controls
+                    src={item.url}
+                    className="w-full rounded"
+                  />
+                )
+              )}
+            </div>
+
+            <Button
+              onClick={closeGaleria}
+              className="mt-4 px-4 py-2 bg-gray-700 text-white rounded"
+            >
+              Cerrar galería
+            </Button>
+          </DialogPanel>
+        </div>
+      </Dialog>
     </section>
   );
 }
