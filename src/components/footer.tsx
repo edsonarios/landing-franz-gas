@@ -4,6 +4,7 @@ import {
   MapPin, 
   Wrench, 
 } from 'lucide-react';
+import { numeroWhatsApp } from '../utils/personal';
 
 export default function Footer() {
     return (
@@ -31,15 +32,15 @@ export default function Footer() {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-green-400" />
-                  <span>+591 70123456</span>
+                  <span>{`+591 ${numeroWhatsApp}`}</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-green-400" />
-                  <span>contacto@gasboliviapro.com</span>
+                  <span>Franzmalo88@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-green-400" />
-                  <span>La Paz, Cochabamba, Santa Cruz</span>
+                  <span>La Paz, El Alto, Cochabamba, Santa Cruz</span>
                 </div>
               </div>
             </div>
@@ -47,18 +48,20 @@ export default function Footer() {
             <div>
               <h5 className="text-lg font-semibold mb-4">Servicios</h5>
               <ul className="space-y-2 text-gray-400">
-                <li>• Instalación de Gas Natural</li>
-                <li>• Conversión GLP a GN</li>
+                <li>• Instalación de Sistemas de Gas Domiciliario</li>
+                <li>• Instalación Calentadores de Agua a Gas</li>
+                <li>• Instalación de Calentadores a Gas</li>
+                <li>• Instalación de Cocinas a Gas</li>
+                <li>• Instalación de Sistemas de Gas Industrial</li>
+                <li>• Instalación de Sistemas de Gas Comercial</li>
+                <li>• Instalación de Sistemas de Gas para Talleres</li>
                 <li>• Mantenimiento Preventivo</li>
-                <li>• Reparaciones de Emergencia</li>
-                <li>• Certificación Oficial</li>
-                <li>• Inspecciones de Seguridad</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-            <p>&copy; 2024 GasBolivia Pro. Todos los derechos reservados. | Certificado por YPFB Gas</p>
+            <p>&copy; 2025 Añaguaya Gas | Certificado por YPFB</p>
           </div>
         </div>
       </footer>

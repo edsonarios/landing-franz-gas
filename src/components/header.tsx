@@ -1,6 +1,6 @@
-import {
-  Wrench, 
-} from 'lucide-react';
+import { Wrench } from "lucide-react";
+import WhatsApp from "./icon/wsp";
+import { numeroWhatsApp } from "../utils/personal";
 
 export default function Header() {
   return (
@@ -12,13 +12,23 @@ export default function Header() {
               <Wrench className="h-8 w-8" />
             </div>
             <div>
-              <h1 className="text-2xl font-bold">GasBolivia Pro</h1>
+              <h1 className="text-2xl font-bold">Añaguaya Gas</h1>
               <p className="text-green-200 text-sm">
-                Instalaciones Certificadas
+                Instalaciones De Gas
               </p>
             </div>
           </div>
-          <nav className="hidden md:flex space-x-6">
+          <nav className="hidden md:flex space-x-6 items-center">
+            <a
+              href={`https://wa.me/591${numeroWhatsApp}`}
+              className="bg-green-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-900 transition-colors inline-flex items-center justify-center space-x-2"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Contactanos por WhatsApp"
+            >
+              <WhatsApp />
+              <span>WhatsApp</span>
+            </a>
             <a
               href="#trabajos"
               className="hover:text-green-200 transition-colors"

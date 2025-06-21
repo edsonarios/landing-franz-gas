@@ -1,4 +1,5 @@
-import { Phone } from "lucide-react";
+import { numeroWhatsApp } from "../utils/personal";
+import WhatsApp from "./icon/wsp";
 
 export default function Contactanos() {
   return (
@@ -12,17 +13,14 @@ export default function Contactanos() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+59170123456"
-            className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center space-x-2"
+            href={`https://wa.me/591${numeroWhatsApp}`}
+            className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center space-x-2 text-2xl"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Contactanos por WhatsApp"
           >
-            <Phone className="h-5 w-5" />
-            <span>Llamar Ahora</span>
-          </a>
-          <a
-            href="https://wa.me/59170123456"
-            className="bg-green-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-900 transition-colors inline-flex items-center justify-center space-x-2"
-          >
-            <span>WhatsApp</span>
+            <WhatsApp />
+            <span>72055855</span>
           </a>
         </div>
       </div>
