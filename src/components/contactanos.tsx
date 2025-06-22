@@ -4,7 +4,7 @@ import WhatsApp from "./icon/wsp";
 export default function Contactanos() {
   return (
     <section className="bg-gradient-to-r from-green-700 to-green-600 py-16 text-white">
-      <div className="container mx-auto px-4 text-center">
+      <div className="container mx-auto px-4 text-center" data-aos="fade-up">
         <h3 className="text-4xl font-bold mb-4">
           ¿Necesitas una Instalación de Gas?
         </h3>

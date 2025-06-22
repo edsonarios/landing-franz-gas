@@ -15,10 +15,16 @@ export default function Trabajos() {
   return (
     <section id="trabajos" className="py-16">
       <div className="container mx-auto px-4">
-        <h3 className="text-4xl font-bold text-center text-gray-800 mb-4">
+        <h3
+          className="text-4xl font-bold text-center text-gray-800 mb-4"
+          data-aos="fade-up"
+        >
           Trabajos Realizados
         </h3>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p
+          className="text-center text-gray-600 mb-12 max-w-2xl mx-auto"
+          data-aos="fade-up"
+        >
           Conoce algunos de nuestros proyectos más destacados
         </p>
 
@@ -31,6 +37,7 @@ export default function Trabajos() {
               <div
                 key={trabajo.id}
                 className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group"
+                data-aos="fade-up"
               >
                 <div className="relative">
                   <img

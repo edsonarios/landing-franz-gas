@@ -1,13 +1,14 @@
 import { Star, Users, Award } from "lucide-react";
-const URL = import.meta.env.VITE_MEDIA_URL || '/media/';
+const URL = import.meta.env.VITE_MEDIA_URL || "/media/";
 
 export default function Hero() {
   return (
-    <section className="relative h-[600px]">
+    <section className="relative h-[600px] mt-10">
       <img
         src={`${URL}f-franz.webp`}
         alt="Trabajador instalando gas"
         className="absolute inset-0 w-full h-full object-cover"
+        data-aos="fade-left"
       />
 
       {/* Desvanecimiento a la izquierda */}
@@ -15,17 +16,20 @@ export default function Hero() {
 
       <div className="relative z-10 h-full flex items-center pl-8 md:pl-20">
         <div className="max-w-xl">
-          <h1 className="text-5xl font-bold text-gray-800 mb-6 leading-tight">
-            Instalaciones de Gas {" "}
+          <h1
+            className="text-5xl font-bold text-gray-800 mb-6 leading-tight"
+            data-aos="fade-right"
+          >
+            Instalaciones de Gas{" "}
             <span className="text-green-700">Profesionales</span>
           </h1>
-          <p className="text-lg text-gray-50 mb-8 bg-green-700 p-2 rounded-md bg-opacity-70">
+          <p className="text-lg text-gray-50 mb-8 bg-green-700 p-2 rounded-md bg-opacity-70"data-aos="fade-right">
             <span className="font-bold text-xl">Franz Añaguaya Pachacute </span>{" "}
             - Especialistas certificados en instalación, mantenimiento y
             reparación de sistemas de gas domiciliario en toda Bolivia. Más de
             10 años de experiencia garantizando tu seguridad.
           </p>
-          <div className="flex gap-6 flex-wrap">
+          <div className="flex gap-6 flex-wrap" data-aos="fade-right">
             <div className="bg-white/80 backdrop-blur p-2 rounded-xl shadow-md text-center w-40">
               <Users className="size-10 text-green-600 mx-auto mb-2" />
               <div className="text-3xl font-bold text-gray-800">100+</div>
