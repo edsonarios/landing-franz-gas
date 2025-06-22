@@ -1,10 +1,11 @@
 import { Star, Users, Award } from "lucide-react";
+const URL = import.meta.env.VITE_MEDIA_URL || '/media/';
 
 export default function Hero() {
   return (
     <section className="relative h-[600px]">
       <img
-        src="/franz/franz.jpeg"
+        src={`${URL}f-franz.webp`}
         alt="Trabajador instalando gas"
         className="absolute inset-0 w-full h-full object-cover"
       />

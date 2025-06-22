@@ -1,3 +1,5 @@
+const URL = import.meta.env.VITE_MEDIA_URL || '/media/';
+
 export const trabajos = [
   {
     id: 1,
@@ -8,42 +10,42 @@ export const trabajos = [
     fecha: "",
     media: [
       {
-        url: "/franz/cocina1.jpeg",
+        url: `${URL}f-cocina1.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/cocina2.jpeg",
+        url: `${URL}f-cocina2.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/cocina3.jpeg",
+        url: `${URL}f-cocina3.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/cocina4.jpeg",
+        url: `${URL}f-cocina4.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/cocina5.jpeg",
+        url: `${URL}f-cocina5.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/cocina6.jpeg",
+        url: `${URL}f-cocina6.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/cocina7.jpeg",
+        url: `${URL}f-cocina7.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/cocina8.jpeg",
+        url: `${URL}f-cocina8.webp`,
         type: "image",
         thumbnail: ""
       },
@@ -58,113 +60,113 @@ export const trabajos = [
     fecha: "",
     media: [
       {
-        url: "/franz/caja1.jpeg",
+        url: `${URL}f-caja1.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja2.jpeg",
+        url: `${URL}f-caja2.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja3.jpeg",
+        url: `${URL}f-caja3.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja4.jpeg",
+        url: `${URL}f-caja4.webp`,
         type: "image",
         thumbnail: ""
       },
 
       {
-        url: "/franz/caja6.jpeg",
+        url: `${URL}f-caja6.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja7.jpeg",
+        url: `${URL}f-caja7.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja5.jpeg",
+        url: `${URL}f-caja5.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja8.jpeg",
+        url: `${URL}f-caja8.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja9.jpeg",
+        url: `${URL}f-caja9.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja10.jpeg",
+        url: `${URL}f-caja10.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja11.jpeg",
+        url: `${URL}f-caja11.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja12.jpeg",
+        url: `${URL}f-caja12.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja13.jpeg",
+        url: `${URL}f-caja13.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja14.jpeg",
+        url: `${URL}f-caja14.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja15.jpeg",
+        url: `${URL}f-caja15.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja16.jpeg",
+        url: `${URL}f-caja16.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja17.jpeg",
+        url: `${URL}f-caja17.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja18.jpeg",
+        url: `${URL}f-caja18.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja19.jpeg",
+        url: `${URL}f-caja19.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja20.jpeg",
+        url: `${URL}f-caja20.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja21.jpeg",
+        url: `${URL}f-caja21.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/caja22.jpeg",
+        url: `${URL}f-caja22.webp`,
         type: "image",
         thumbnail: ""
       },
@@ -179,12 +181,12 @@ export const trabajos = [
     fecha: "",
     media: [
       {
-        url: "/franz/calefaccion1.jpeg",
+        url: `${URL}f-calefaccion1.webp`,
         type: "image",
         thumbnail: ""
       },
       {
-        url: "/franz/calefaccion2.jpeg",
+        url: `${URL}f-calefaccion2.webp`,
         type: "image",
         thumbnail: ""
       },
@@ -199,7 +201,7 @@ export const trabajos = [
     fecha: "",
     media: [
       {
-        url: "/franz/calefon1.jpeg",
+        url: `${URL}f-calefon1.webp`,
         type: "image",
         thumbnail: "",
       },
@@ -214,12 +216,12 @@ export const trabajos = [
     fecha: "",
     media: [
       {
-        url: "/franz/horno.mp4",
+        url: `${URL}f-horno.mp4`,
         type: "video",
-        thumbnail: "/franz/horno1.jpeg",
+        thumbnail: `${URL}f-horno1.webp`,
       },
       {
-        url: "/franz/horno1.jpeg",
+        url: `${URL}f-horno1.webp`,
         type: "image",
         thumbnail: "",
       },
@@ -234,62 +236,62 @@ export const trabajos = [
     fecha: "",
     media: [
       {
-        url: "/franz/tubo.mp4",
+        url: `${URL}f-tubo.mp4`,
         type: "video",
-        thumbnail: "/franz/tubo11.jpeg",
+        thumbnail: `${URL}f-tubo11.webp`,
       },
       {
-        url: "/franz/tubo1.jpeg",
+        url: `${URL}f-tubo1.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo2.jpeg",
+        url: `${URL}f-tubo2.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo3.jpeg",
+        url: `${URL}f-tubo3.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo4.jpeg",
+        url: `${URL}f-tubo4.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo5.jpeg",
+        url: `${URL}f-tubo5.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo6.jpeg",
+        url: `${URL}f-tubo6.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo7.jpeg",
+        url: `${URL}f-tubo7.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo8.jpeg",
+        url: `${URL}f-tubo8.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo9.jpeg",
+        url: `${URL}f-tubo9.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo10.jpeg",
+        url: `${URL}f-tubo10.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/tubo11.jpeg",
+        url: `${URL}f-tubo11.webp`,
         type: "image",
         thumbnail: "",
       },
@@ -304,27 +306,27 @@ export const trabajos = [
     fecha: "",
     media: [
       {
-        url: "/franz/soldadura.mp4",
+        url: `${URL}f-soldadura.mp4`,
         type: "video",
-        thumbnail: "/franz/soldadura1.jpeg",
+        thumbnail: `${URL}f-soldadura1.webp`,
       },
       {
-        url: "/franz/soldadura1.jpeg",
+        url: `${URL}f-soldadura1.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/soldadura2.jpeg",
+        url: `${URL}f-soldadura2.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/soldadura3.jpeg",
+        url: `${URL}f-soldadura3.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/soldadura4.jpeg",
+        url: `${URL}f-soldadura4.webp`,
         type: "image",
         thumbnail: "",
       },
@@ -339,67 +341,62 @@ export const trabajos = [
     fecha: "",
     media: [
       {
-        url: "/franz/trabajo1.jpeg",
+        url: `${URL}f-trabajo1.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo2.jpeg",
+        url: `${URL}f-trabajo2.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo3.jpeg",
+        url: `${URL}f-trabajo3.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo4.jpeg",
+        url: `${URL}f-trabajo4.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo5.jpeg",
+        url: `${URL}f-trabajo5.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo6.jpeg",
+        url: `${URL}f-trabajo7.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo7.jpeg",
+        url: `${URL}f-trabajo8.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo8.jpeg",
+        url: `${URL}f-trabajo9.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo9.jpeg",
+        url: `${URL}f-trabajo10.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo10.jpeg",
+        url: `${URL}f-trabajo11.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo11.jpeg",
+        url: `${URL}f-trabajo12.webp`,
         type: "image",
         thumbnail: "",
       },
       {
-        url: "/franz/trabajo12.jpeg",
-        type: "image",
-        thumbnail: "",
-      },
-      {
-        url: "/franz/trabajo13.jpeg",
+        url: `${URL}f-trabajo13.webp`,
         type: "image",
         thumbnail: "",
       },
