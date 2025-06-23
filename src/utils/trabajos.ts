@@ -165,11 +165,6 @@ export const trabajos = [
         type: "image",
         thumbnail: ""
       },
-      {
-        url: `${URL}f-caja22.webp`,
-        type: "image",
-        thumbnail: ""
-      },
     ]
   },
   {

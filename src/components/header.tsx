@@ -9,7 +9,7 @@ export default function Header() {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3" data-aos="zoom-in">
+          <a href="#" className="flex items-center space-x-3" data-aos="zoom-in">
             <div className="bg-white/20 p-2 rounded-lg">
               <Wrench className="h-8 w-8" />
             </div>
@@ -17,7 +17,7 @@ export default function Header() {
               <h1 className="text-2xl font-bold">Añaguaya Gas</h1>
               <p className="text-green-200 text-sm">Instalaciones De Gas</p>
             </div>
-          </div>
+          </a>
           <nav className="hidden md:flex space-x-6 items-center" data-aos="zoom-in">
             <a
               href={`https://wa.me/591${numeroWhatsApp}`}
