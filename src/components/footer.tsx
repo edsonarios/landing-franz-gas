@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
           
           <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
-            <p>&copy; 2025 Añaguaya Gas | Certificado por YPFB</p>
+            <p>&copy; 2025 Añaguaya Gas | Certificado por la ANH y YPFB</p>
           </div>
         </div>
       </footer>

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.servicio-gratis {
+  color: #dc2626; /* red-600 */
+  font-weight: bold;
+}

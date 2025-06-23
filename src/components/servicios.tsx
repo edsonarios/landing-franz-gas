@@ -14,10 +14,17 @@ export default function Servicios() {
               className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
             >
               <servicio.icono className="h-12 w-12 text-green-600 mb-4" />
-              <h4 className="text-xl font-semibold text-gray-800 mb-3">
-                {servicio.titulo}
+              <h4 className="text-xl font-semibold text-gray-800 mb-3" dangerouslySetInnerHTML={{ __html: servicio.titulo }}>
+                
               </h4>
-              <p className="text-gray-600">{servicio.descripcion}</p>
+              {(servicio.isList ? (
+              <ul className="list-disc pl-5 text-gray-600">
+                {servicio.descripcion.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+              ) : (<p className="text-gray-600">{servicio.descripcion[0]}</p>
+              ))}
             </div>
           ))}
         </div>
