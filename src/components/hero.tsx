@@ -17,11 +17,11 @@ export default function Hero() {
       <div className="relative z-10 h-full flex items-center pl-8 md:pl-20">
         <div className="max-w-xl">
           <h1
-            className="text-5xl font-bold text-gray-800 mb-6 leading-tight"
+            className="text-4xl font-bold text-gray-800 mb-6 leading-tight"
             data-aos="fade-right"
           >
-            Instalaciones de Gas{" "}
-            <span className="text-green-700">Profesionales</span>
+            Empresa Instaladora de Gas Domiciliario{" "}
+            <span className="text-green-700">AÑAGUAYA GAS</span>
           </h1>
           <p className="text-lg text-gray-50 mb-8 bg-green-700 p-2 rounded-md bg-opacity-70"data-aos="fade-right">
             <span className="font-bold text-xl">Franz Añaguaya Pachacute </span>{" "}
